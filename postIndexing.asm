@@ -14,14 +14,14 @@ Reset_Handler
 	LDR R2, =0XA1243140
 	LDR R0, =N
 	LDR R1, =DST
-	LDR R2, [R0, #4]
-	STR R2, [R1, #4]
-	LDR R2, [R0, #4]
-	STR R2, [R1, #4]
-	LDR R2, [R0, #4]
-	STR R2, [R1, #4]
-	LDR R2, [R0, #4]
-	STR R2, [R1, #4]
+	LDR R2, [R0], #4; #-4 for negative indexing
+	STR R2, [R1], #4
+	LDR R2, [R0], #4
+	STR R2, [R1], #4
+	LDR R2, [R0], #4
+	STR R2, [R1], #4
+	LDR R2, [R0], #4
+	STR R2, [R1], #4
 	
 STOP 
 	B STOP
